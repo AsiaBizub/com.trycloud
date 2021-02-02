@@ -21,7 +21,7 @@ public class TestBase {
         driver.get(ConfigurationReader.getProperty("url"));
     }
 
-    public void login() {
+    public void login() {   // User Story 1, Test Case 1
         driver.findElement(By.linkText("Login")).click();
         WebElement userName = driver.findElement(By.id("user"));
         WebElement password = driver.findElement(By.id("password"));

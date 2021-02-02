@@ -23,16 +23,12 @@ public class UserStory6 extends TestBase {
         //Test case #1 - verify users can access to Talks module
         //2. Click “Notes” module
 
-        WebElement notesIcon = driver.findElement(By.xpath(("//a[href='http://qa.trycloud.net/index.php/apps/notes/'])")));
-        //notesIcon.click();
-
-
 
 
         //String expectedInTitle = "Notes";
         //String actualInTitle = "";
 
-        //if(actu)
+
         //3. Verify the page tile/URL is Notes module’s tile
     }
 
