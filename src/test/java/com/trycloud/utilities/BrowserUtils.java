@@ -3,6 +3,7 @@ package com.trycloud.utilities;
 public class BrowserUtils {
 
 
+
     public static void threadSleep (int second){
         second *= 1000;
         try{
@@ -11,4 +12,5 @@ public class BrowserUtils {
             System.out.println("Sleep method working");
         }
     }
+
 }

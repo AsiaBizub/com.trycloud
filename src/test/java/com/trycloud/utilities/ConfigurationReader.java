@@ -6,6 +6,7 @@ import java.util.Properties;
 
 public class ConfigurationReader {
 
+
     //This class implements repeated steps of reading
     // from configuration.properties file
 
@@ -18,6 +19,7 @@ public class ConfigurationReader {
             FileInputStream file = new FileInputStream("configuration.properties");
 
             //3: Load the opened file into properties object
+
             properties.load(file);
 
             //closing the file in JVM Memory
@@ -28,10 +30,11 @@ public class ConfigurationReader {
         }
     }
 
-    //4: Use the object to read from the configuration.properties file
+
     public static String getProperty(String keyWord){
         return properties.getProperty(keyWord);
     }
 
 
 }
+
