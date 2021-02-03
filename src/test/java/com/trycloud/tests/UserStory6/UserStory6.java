@@ -23,13 +23,17 @@ public class UserStory6 extends TestBase {
         //Test case #1 - verify users can access to Talks module
         //2. Click “Notes” module
 
-
-
-        //String expectedInTitle = "Notes";
-        //String actualInTitle = "";
-
-
         //3. Verify the page tile/URL is Notes module’s tile
+        String expectedInTitle = "Notes";
+        String actualInTitle = driver.getTitle();
+        if(expectedInTitle.equals(actualInTitle)){
+            System.out.println("Title verification passed");
+        }else {
+            System.out.println("actualTitle = " + actualInTitle);
+            System.out.println("expectedTitle = " + expectedInTitle);
+        }
+
+
     }
 
     @Test
