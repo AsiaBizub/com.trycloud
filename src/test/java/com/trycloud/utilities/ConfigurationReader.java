@@ -6,7 +6,6 @@ import java.util.Properties;
 
 public class ConfigurationReader {
 
-
     //This class implements repeated steps of reading
     // from configuration.properties file
 
@@ -37,4 +36,3 @@ public class ConfigurationReader {
 
 
 }
-
