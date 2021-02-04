@@ -1,7 +1,8 @@
 package com.trycloud.tests;
 
 import com.github.javafaker.Faker;
-import com.trycloud.test.base.TestBase;
+import com.trycloud.tests.base.TestBase;
+import com.trycloud.tests.base.TestBase;
 import com.trycloud.utilities.ConfigurationReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
