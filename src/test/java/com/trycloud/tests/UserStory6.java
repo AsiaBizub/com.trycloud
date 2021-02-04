@@ -1,4 +1,4 @@
-package com.trycloud.tests.UserStory6;
+package com.trycloud.tests;
 
 import com.trycloud.tests.base.TestBase;
 import org.openqa.selenium.By;
@@ -23,19 +23,23 @@ public class UserStory6 extends TestBase {
         //Test case #1 - verify users can access to Talks module
         //2. Click “Notes” module
 
-        //3. Verify the page tile/URL is Notes module’s tile
-        String expectedInTitle = "Notes";
+        WebElement talkModule = driver.findElement(By.xpath("//*@id='appmenu']/li[4]"));
+        talkModule.click();
+        String expectedInTitle = "Talk - Trycloud";
         String actualInTitle = driver.getTitle();
-        if(expectedInTitle.equals(actualInTitle)){
+        if (expectedInTitle.equals(actualInTitle)) {
             System.out.println("Title verification passed");
-        }else {
+        } else {
             System.out.println("actualTitle = " + actualInTitle);
             System.out.println("expectedTitle = " + expectedInTitle);
         }
-
-
     }
 
+}
+
+
+
+/*
     @Test
     public void sendNotes () {
         //Test case #2 - verify users can send notes in the page
@@ -48,3 +52,4 @@ public class UserStory6 extends TestBase {
     }
 
 }
+*/
