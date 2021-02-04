@@ -11,7 +11,7 @@ public class UserStory6 extends TestBase {
     //User Story 6: As a user, I should be able to access to Notes module.
 
     //6.1 :Set up chrome browser
-    //6.2 : Get https://trycloud.net/
+    //6.2 : Get qa3
     //6.3: Login as a user
 
 
