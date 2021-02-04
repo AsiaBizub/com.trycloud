@@ -15,10 +15,17 @@ public class TestCase1 extends TestBase {
     public void SearchBar(){
         WebElement searchBar = driver.findElement(By.xpath("//input[@id='searchbox']"));
         searchBar.click();
-        searchBar.sendKeys("Investor Factors Agent");
+        String searchWord = "Investor Factors Agent";
+        searchBar.sendKeys(searchWord);
         searchBar.sendKeys(Keys.ENTER);
-        WebElement searchResult = driver.findElement(By.xpath("//input[@class='innernametext']"));
-        System.out.println(searchResult.getText());
+        WebElement searchResult = driver.findElement(By.xpath("//*[@id='fileList']/tr[3]/td[2]/a/span[1]/span"));
+        String result = searchResult.getText();
+        if(searchWord.equalsIgnoreCase(result)){
+            System.out.println("Search and Result Match");
+        }else{
+            System.out.println("Search and Result do not Match");
+        }
+
     }
 
 
