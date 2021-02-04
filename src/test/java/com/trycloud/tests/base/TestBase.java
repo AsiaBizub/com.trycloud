@@ -19,20 +19,16 @@ public class TestBase {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(ConfigurationReader.getProperty("url"));
-    }
-
-    public void login() {   // User Story 1, Test Case 1
         driver.findElement(By.linkText("Login")).click();
         WebElement userName = driver.findElement(By.id("user"));
         WebElement password = driver.findElement(By.id("password"));
+        userName.click();
         userName.sendKeys(ConfigurationReader.getProperty("username1"));
         password.sendKeys(ConfigurationReader.getProperty("password"));
         driver.findElement(By.id("submit")).click();
     }
-
     @AfterMethod
-
-    public void tearDown (){
-            driver.close();
+    public void tearDown(){
+        //  driver.close();
     }
 }

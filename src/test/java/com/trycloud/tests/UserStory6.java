@@ -1,6 +1,7 @@
 package com.trycloud.tests;
 
 import com.trycloud.tests.base.TestBase;
+import com.trycloud.utilities.BrowserUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -21,10 +22,11 @@ public class UserStory6 extends TestBase {
         // Successful Login
 
         //Test case #1 - verify users can access to Talks module
-        //2. Click “Notes” module
-
-        WebElement talkModule = driver.findElement(By.xpath("//*@id='appmenu']/li[4]"));
+        //2. Click "Notes" module
+        BrowserUtils.threadSleep(3);
+        WebElement talkModule = driver.findElement(By.cssSelector("#appmenu > li:nth-child(4) > a"));
         talkModule.click();
+
         String expectedInTitle = "Talk - Trycloud";
         String actualInTitle = driver.getTitle();
         if (expectedInTitle.equals(actualInTitle)) {
