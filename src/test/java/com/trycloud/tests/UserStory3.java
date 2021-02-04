@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class UserStory7 extends TestBase {
+public class UserStory3 extends TestBase {
 
     //  Test case #7 - verify users can upload a file inside a folder
 
