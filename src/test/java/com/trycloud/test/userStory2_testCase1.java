@@ -6,5 +6,5 @@ public class userStory2_testCase1 {
     //Test case #1 - verify users access to the main modules1.Login as a user
     // 2.Verify the user see the following modules:files,galleries.activity,talk,contacts,calendar,note
     //expected module name ;Galleries actual module name ;photos
-
+//updated
 }
