@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class UserStory6 extends TestBase {
 
-    //User Story 6: As a user, I should be able to access to Notes module.
+    //User Story 6: As a user, I should be able to access to Talks module.
 
     //6.1 :Set up chrome browser
     //6.2 : Get qa3
@@ -24,12 +24,12 @@ public class UserStory6 extends TestBase {
         //Test case #1 - verify users can access to Talks module
         //2. Click "Notes" module
         BrowserUtils.threadSleep(3);
-        WebElement talkModule = driver.findElement(By.cssSelector("#appmenu > li:nth-child(4) > a"));
+        WebElement talkModule = driver.findElement(By.cssSelector("#appmenu > li:nth-child(5) > a"));
         talkModule.click();
 
-        String expectedInTitle = "Talk - Trycloud";
+        String expectedInTitle = "Talk";
         String actualInTitle = driver.getTitle();
-        if (expectedInTitle.equals(actualInTitle)) {
+        if (expectedInTitle.contains(actualInTitle)) {
             System.out.println("Title verification passed");
         } else {
             System.out.println("actualTitle = " + actualInTitle);
@@ -43,13 +43,19 @@ public class UserStory6 extends TestBase {
 
 /*
     @Test
-    public void sendNotes () {
-        //Test case #2 - verify users can send notes in the page
+    public void createNewConversation () {
+        //Test case #2 - verify users can send star a new conversation from the Talk module
 
-        //2. Click notes module
-        //3. Click “New Note” button
-        //4. Write a message/Note
-        //5. Verify the note is added on the note list
+        //2. Click Talk module
+        //3. Press “+” button below Talk module
+        //4. Enter conversation name in the input box
+        //5. Click "Add participants"
+        //6. Search participants
+        //7. Add participants from the list
+        //8. Press "create conversation" button
+        //9. Verify conversation name is in the page title
+        //10. To start the call, press "Start call" button
+        //11. To end the call, press "Leave call" button
 
     }
 
