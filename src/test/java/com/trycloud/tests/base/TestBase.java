@@ -18,14 +18,15 @@ public abstract class TestBase {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
         driver.get(ConfigurationReader.getProperty("url"));
-        driver.findElement(By.linkText("Login")).click();
+        //driver.findElement(By.linkText("Login")).click();
         WebElement userName = driver.findElement(By.id("user"));
         WebElement password = driver.findElement(By.id("password"));
         userName.click();
         userName.sendKeys(ConfigurationReader.getProperty("username1"));
         password.sendKeys(ConfigurationReader.getProperty("password"));
-        driver.findElement(By.id("submit")).click();
+        driver.findElement(By.id("submit-form")).click();
     }
     @AfterMethod
     public void tearDown(){
